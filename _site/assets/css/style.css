@@ -357,8 +357,9 @@ a:hover small {
 }
 
 .wrapper {
-  width: 950px;
-  margin: 0 auto;
+  max-width: 95%; /* Use percentage instead of fixed width */
+  margin: 0 auto; /* Center the content */
+  padding: 10px; /* Add padding for smaller screens */
 }
 
 blockquote {
@@ -565,15 +566,14 @@ footer {
 }
 /* Top-Right Horizontal Navigation */
 .top-right-nav {
-  position: fixed; /* Keeps it fixed at the top-right */
-  top: 0px;
+  position: flex; /* Keeps it fixed at the top-right */
   right: 80px;
   z-index: 1000; /* Ensures it stays above other elements */
   width: 100%;
   background-color: #ffffff;
-  padding: 30px 40px; /* Adds padding for a clean look */
+  padding: 0px 40px; /* Adds padding for a clean look */
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 14px;
 }
 
 .top-right-nav ul {
@@ -583,10 +583,6 @@ footer {
   display: flex; /* Displays the items horizontally */
   justify-content: flex-end; /* Aligns links to the right */
   gap: 30px; /* Adds spacing between items */
-}
-
-.top-right-nav ul li {
-  margin: 0;
 }
 
 .top-right-nav ul li a {
