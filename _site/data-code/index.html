@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- SEO Metadata -->
-    {% seo %}
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data &amp; Code | Giulio Rossetti</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Data &amp; Code" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/data-code/" />
+<meta property="og:url" content="http://localhost:4000/data-code/" />
+<meta property="og:site_name" content="Giulio Rossetti" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data &amp; Code" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Data &amp; Code","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/GRround.png"}},"url":"http://localhost:4000/data-code/"}</script>
+<!-- End Jekyll SEO tag -->
+
     <meta name="description" content="Personal website of Giulio Rossetti, Post-Doc Researcher at Warwick Business School.">
     <meta name="keywords" content="Giulio Rossetti, Financial Econometrics, Warwick, Research, Teaching">
     <meta name="author" content="Giulio Rossetti">
-    <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:image" content="{{ site.baseurl }}/assets/img/profile.jpg">
-    <meta property="og:url" content="{{ site.github.url }}">
+    <meta property="og:title" content="Giulio Rossetti">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/assets/img/profile.jpg">
+    <meta property="og:url" content="">
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
 
     <!-- Google Analytics 4 -->
-    {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {% endif %}
+    
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        {% if site.logo %}
+        <h1>Giulio Rossetti</h1>
+        
         <style>
           .profile {
             max-width: 100%;
@@ -52,55 +58,72 @@
             border-radius: 50%; /* Optional: makes icons circular if they are not */
           }
         </style>
-        <img src="{{ site.baseurl }}{{ site.logo }}" alt="Logo" class="profile">
+        <img src="/assets/img/GRround.png" alt="Logo" class="profile">
         <div class="social-icons">
           <!-- GitHub -->
           <a href="https://github.com/GiulioRossetti94" target="_blank">
-            <img src="{{ site.baseurl }}/assets/img/githubicon.png" alt="GitHub">
+            <img src="/assets/img/githubicon.png" alt="GitHub">
           </a>
           <!-- LinkedIn -->
           <a href="https://linkedin.com/in/rossettigiulio" target="_blank">
-            <img src="{{ site.baseurl }}/assets/img/linkedinicon.png" alt="LinkedIn">
+            <img src="/assets/img/linkedinicon.png" alt="LinkedIn">
           </a>
           <!-- X (formerly Twitter) -->
           <a href="https://x.com/gi_r94" target="_blank">
-            <img src="{{ site.baseurl }}/assets/img/xicon2.png" alt="X">
+            <img src="/assets/img/xicon2.png" alt="X">
           </a>
         </div>
-        {% endif %}
+        
 
         <p class="view">Post-Doc Researcher<br>WBS | University of Warwick</p>
         <p class="view">
-          <a href="{{ '/assets/pdf/CV-GR.pdf' | relative_url }}" target="_blank">Download CV</a>
+          <a href="/assets/pdf/CV-GR.pdf" target="_blank">Download CV</a>
         </p>
       </header>
       
       <nav class="top-right-nav">
         <ul>
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
-          <li><a href="{{ '/teaching/' | relative_url }}">Teaching</a></li>
-          <li><a href="{{ '/data-code/' | relative_url }}">Data & Code</a></li>
-          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/teaching/">Teaching</a></li>
+          <li><a href="/data-code/">Data & Code</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Centered Page Title -->
       <div class="page-title-container">
-        <h1 class="page-title">{{ page.title }}</h1>
+        <h1 class="page-title">Data & Code</h1>
       </div>
 
       <section>
-        {{ content }}
+        <h1 id="pybondlab">PyBondLab</h1>
+
+<p>I have worked with <a href="https://www.alexdickerson.com/home" target="_blank">Alex Dickerson</a> to create <strong>PyBondLab</strong>, a Python package offering tools for empirical asset pricing research.</p>
+
+<p>It is part of the <a href="https://openbondassetpricing.com/" target="_blank">Open Source Bond Asset Pricing project</a>.
+Check the github repo <a href="https://github.com/GiulioRossetti94/PyBondLab" target="_blank">HERE</a> and examples <a href="https://github.com/GiulioRossetti94/PyBondLab/tree/main/examples" target="_blank">HERE</a>.</p>
+
+<p>You can install the latest release using pip</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>PyBondLab
+</code></pre></div></div>
+
+<p>Or you can install the master branch from GitHub by cloning the repo and running setup</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/GiulioRossetti94/PyBondLab.git
+<span class="nb">cd </span>PyBondLab
+python setup.py <span class="nb">install</span>
+</code></pre></div></div>
+
       </section>
 
       <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+        <p>&copy; 2025 Giulio Rossetti</p>
       </footer>
     </div>
 
     <!-- Additional Scripts -->
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script src="/assets/js/scale.fix.js"></script>
     
     <!-- Track File Downloads -->
     <script>
