@@ -35,6 +35,28 @@
 
     <!-- Google Analytics 4 -->
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PHQX8Q4JM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5PHQX8Q4JM');
+    </script>
+    
+    <!-- Custom Scripts -->
+    <script>
+      function trackDownload(label) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'download', {
+            event_category: 'Slides',
+            event_label: label,
+          });
+        } else {
+          console.log(`Download tracked: ${label}`);
+        }
+      }
+    </script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -77,7 +99,8 @@
 
         <p class="view">Post-Doc Researcher<br>WBS | University of Warwick</p>
         <p class="view">
-          <a href="/assets/pdf/CV-GR.pdf" target="_blank">Download CV</a>
+
+          <a href="/assets/pdf/CV-GR.pdf" target="_blank" onclick="gtag('event', 'download', { event_category: 'File', event_label: 'Download CV' });">Download CV</a>
         </p>
       </header>
       
@@ -131,13 +154,25 @@
   <tr>
     <td rowspan="2">Week 1</td>
     <td>Primer in Matrix Algebra</td>
-    <td><a href="URL_TO_SLIDES_WEEK1_SET1" target="_blank">View Slides</a></td>
-    <td><a href="URL_TO_ANNOTATED_SLIDES_WEEK1_SET1" target="_blank">View Annotated Slides</a></td>
+    <td>
+    <a href="/assets/slides/matrixalgebra.pdf" target="_blank" class="slide-link" onclick="trackDownload('Week 1 - Primer Slides')">View Slides</a>
+    </td>
+    <td>
+    <!-- <a href="URL_TO_ANNOTATED_SLIDES_WEEK1_SET1" target="_blank" class="slide-link" onclick="trackDownload('Week 1 - Primer Annotated Slides')">View Annotated Slides</a> -->
+    <span>Annotated Slides</span>
+
+    </td>
   </tr>
   <tr>
     <td>Seminar 1</td>
-    <td><a href="URL_TO_SLIDES_WEEK1_SET2" target="_blank">View Slides</a></td>
-    <td><a href="URL_TO_ANNOTATED_SLIDES_WEEK1_SET2" target="_blank">View Annotated Slides</a></td>
+    <td>
+     <span>Slides</span>
+    <!-- <a href="URL_TO_SLIDES_WEEK1_SET2" target="_blank">View Slides</a> -->
+    </td>
+    <td>
+    <span>Annotated Slides</span>
+    <!-- <a href="URL_TO_ANNOTATED_SLIDES_WEEK1_SET2" target="_blank">View Annotated Slides</a> -->
+    </td>
   </tr>
   <!-- <tr>
     <td rowspan="3">Week 2</td>
@@ -297,6 +332,7 @@
 
     <!-- Additional Scripts -->
     <script src="/assets/js/scale.fix.js"></script>
+    <script src="/assets/js/teaching.js"></script>
     
     <!-- Track File Downloads -->
     <script>
